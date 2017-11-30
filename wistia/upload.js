@@ -33,7 +33,7 @@
           fileCtrl.status = response.data.status || '';
 
           if (fileCtrl.status == 'ready')
-            fileCtrl.url = $sce.trustAsResourceUrl('http://fast.wistia.net/embed/iframe/' + fileCtrl.hashId);
+            fileCtrl.url = $sce.trustAsResourceUrl('https://fast.wistia.net/embed/iframe/' + fileCtrl.hashId);
           else if (fileCtrl.status != 'failed') {
             //check status again in a few seconds
             $timeout(function(){
