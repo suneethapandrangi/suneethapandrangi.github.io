@@ -1,0 +1,16 @@
+<div>
+  <span class="btn btn-primary btn-file fileControlHolder">
+    Upload File<input id="fileupload_input" class="btn" type="file" 
+    name="file" data-url="https://upload.wistia.com" >
+  </span>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" 
+    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" 
+    ng-style="{'width': $ctrl.progress + '%' }"></div>
+  </div>
+  <span ng-show="$ctrl.url == ''">Status: {{$ctrl.status}}</span>
+  <iframe ng-src="{{$ctrl.url}}" 
+  allowtransparency="true" frameborder="0" 
+  scrolling="no" class="wistia_embed" name="wistia_embed" 
+  width="640" height="360" ng-show="$ctrl.url != ''"></iframe>
+</div>
